@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+
+# Environment / secrets
+.env
+.env.*
+*.pem
+*.key
+*token*
+*secret*
+*credential*
+*recovery*
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Backups
+*_backup.py
+*.bak
+*~
+
+# Tests generated outside repository
+/tmp/
+
+# Logs
+*.log

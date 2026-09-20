@@ -1,0 +1,8 @@
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.git
+.gitignore
+tests
+main_v01_backup.py
