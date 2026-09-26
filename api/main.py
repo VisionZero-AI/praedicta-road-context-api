@@ -251,9 +251,37 @@ def nearest_segment(lat: float, lon: float):
 def root():
     return {
         "service": "Praedicta Road Context API",
+        "company": "Praedicta Inc.",
+        "positioning": "Predictive Infrastructure Intelligence",
         "version": MODEL_VERSION,
         "status": "research-preview",
-        "documentation": "/docs",
+        "coverage": {
+            "area": "Pittsburgh, Pennsylvania, USA",
+            "road_segments_loaded": len(roads_wgs84),
+        },
+        "purpose": (
+            "Machine-readable structural road context for "
+            "infrastructure, mobility, and AI applications."
+        ),
+        "interfaces": {
+            "coordinate_context": "/v1/road-context?lat={lat}&lon={lon}",
+            "segment_context": "/v1/segments/{segment_id}",
+            "route_context": "/v1/route-context",
+            "health": "/health",
+            "interactive_documentation": "/docs",
+            "openapi_schema": "/openapi.json",
+        },
+        "method": "Retrospective spatial out-of-fold validation",
+        "interpretation": (
+            "Structural context research output. Percentiles are available "
+            "only for road segments inside the retrospective validation cohort."
+        ),
+        "limitations": {
+            "calibrated_crash_probability": False,
+            "safety_certification": False,
+            "safe_unsafe_classification": False,
+            "traffic_exposure_controlled": False,
+        },
     }
 
 
